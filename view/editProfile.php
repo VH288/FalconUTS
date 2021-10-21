@@ -42,6 +42,14 @@
         font-size: small;
     }
 
+    .validation {
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+        padding-top: 5px;
+        text-align: center;
+    }
+
 </style>
 
 <div class="container mt-5 min-vh-100">
@@ -51,53 +59,53 @@
     <form class="w-50 ms-auto me-auto" action="./editProfile.php" method="post">
             <div class="col-lg-6 mt-5 ms-auto me-auto">
                 <label class="form-label">Firstname</label>
-                <input class="form-control" id="first_name" name="first_name" value="<?php echo $first_name ?>" placeholder="New Firstname">
-                <?php
-                    if(in_array("First name is empty",$error_array)){
-                        echo'<p>First name is empty</p>';
-                    }else if(in_array("First name must not less than 2 and more than 25 characters",$error_array)){
-                        echo'<p>First name must not less than 2 and more than 25 characters</p>';
-                    }else if(in_array("First name must only contain letter",$error_array)){
-                        echo'<p>First name must only contain letter</p>';
-                    }
-                ?>
+                <input class="form-control" id="first_name" name="first_name" value="<?php echo $first_name ?>" placeholder="New Firstname" required>
+                <div class="validation">
+                    <?php
+                        if(in_array("First name must not less than 2 and more than 25 characters",$error_array)){
+                            echo'<p>First name must not less than 2 and more than 25 characters</p>';
+                        }else if(in_array("First name must only contain letter",$error_array)){
+                            echo'<p>First name must only contain letter</p>';
+                        }
+                    ?>
+                </div> 
             </div>
             <div class="col-lg-6 mt-3 ms-auto me-auto">
                 <label class="form-label">Lastname</label>
-                <input class="form-control" id="last_name" name="last_name" value="<?php echo $last_name ?>" placeholder="New Lastname">
-                <?php
-                    if(in_array("Last name is empty",$error_array)){
-                        echo'<p>Last name is empty</p>';
-                    }else if(in_array("Last name must not less than 2 and more than 25 characters",$error_array)){
-                        echo'<p>Last name must not less than 2 and more than 25 characters</p>';
-                    }else if(in_array("Last name must only contain words",$error_array)){
-                        echo'<p>Last name must only contain words</p>';
-                    }
-                ?>
+                <input class="form-control" id="last_name" name="last_name" value="<?php echo $last_name ?>" placeholder="New Lastname" required>
+                <div class="validation">
+                    <?php
+                        if(in_array("Last name must not less than 2 and more than 25 characters",$error_array)){
+                            echo'<p>Last name must not less than 2 and more than 25 characters</p>';
+                        }else if(in_array("Last name must only contain words",$error_array)){
+                            echo'<p>Last name must only contain words</p>';
+                        }
+                    ?>
+                </div>
             </div>
             <div class="col-lg-6 mt-3 ms-auto me-auto">
                 <label class="form-label">Phone Number</label>
-                <input class="form-control" id="phone" name="phone" value="<?php echo $phone ?>" placeholder="New Phone Number">
-                <?php
-                    if(in_array("Phone number is empty",$error_array)){
-                        echo'<p>Phone number is empty</p>';
-                    }else if(in_array("Phone number must not less than 11 and more than 13 characters",$error_array)){
-                        echo'<p>Phone number must not less than 11 and more than 13 characters</p>';
-                    }else if(in_array("Phone number must only contain number",$error_array)){
-                        echo'<p>Phone number must only contain number</p>';
-                    }
-                ?>
+                <input class="form-control" id="phone" name="phone" value="<?php echo $phone ?>" placeholder="New Phone Number" required>
+                <div class="validation">
+                    <?php
+                        if(in_array("Phone number must not less than 11 and more than 13 characters",$error_array)){
+                            echo'<p>Phone number must not less than 11 and more than 13 characters</p>';
+                        }else if(in_array("Phone number must only contain number",$error_array)){
+                            echo'<p>Phone number must only contain number</p>';
+                        }
+                    ?>
+                </div>
             </div>
             <div class="col-lg-6 mt-3 ms-auto me-auto">
                 <label class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="New Password">
-                <?php
-                    if(in_array("Password is empty",$error_array)){
-                        echo'<p>Password is empty</p>';
-                    }else if(in_array("Password must not less than 8 and more than 25 characters",$error_array)){
-                        echo'<p>Password must not less than 8 and more than 25 characters</p>';
-                    }
-                ?>
+                <input type="password" class="form-control" id="password" name="password" placeholder="New Password" required>
+                <div class="validation">
+                    <?php
+                        if(in_array("Password must not less than 8 and more than 25 characters",$error_array)){
+                            echo'<p>Password must not less than 8 and more than 25 characters</p>';
+                        }
+                    ?>
+                </div>
             </div>
             <div class="col-lg-6 mt-4 mb-5 ms-auto me-auto d-grid gap-2 d-md-flex justify-content-md-end">
                 <a href="./profile.php">

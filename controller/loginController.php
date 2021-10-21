@@ -1,6 +1,7 @@
 <?php
     $username="";
     $error="";
+    require ('../verifemail/config.php');
     if(isset($_POST['login'])){
         include('../database/db.php');
 
@@ -14,8 +15,9 @@
             $user = mysqli_fetch_assoc($query);
             if(!password_verify($password, $user['password'])){
                 $error="Wrong Password !";
-            }
-            else{
+            }else if($user['is_verified']==0){
+                $error="Please verify your account first !";
+            }else{
                 
                     session_start();
                     $_SESSION['isLogin'] = true;

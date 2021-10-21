@@ -51,8 +51,10 @@
                                 <a href="./editProfile.php?id=<?php echo $user['id'];?>" class="d-grid gap-2 text-decoration-none">
                                     <button type="submit" class="btn btn-primary" value="Edit Profile">Edit Profile</button>
                                 </a>
+                            </div>
+                            <div class="mb-3">
                                 <a href="../controller/deleteProfileController.php?id=<?php echo $user['id'];?>" class="d-grid gap-2 text-decoration-none">
-                                    <button type="submit" class="btn btn-primary" value="Delete Profile" name="delete">Delete Profile</button>
+                                    <button type="submit" class="btn btn-danger" value="Delete Profile" name="delete">Delete Profile</button>
                                 </a>
                             </div>
                         </div>

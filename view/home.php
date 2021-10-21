@@ -28,18 +28,15 @@
                                                 </div>
                                                 <br>
                                                 <hr>
-                                                <div class="col" style=" margin: 1px;">
-                                                    <i class="fa fa-heart" style="color: red;"></i>
-                                                    '.$posts['likes'].'
-                                                </div>
-                                                <div>
+                                                <div style=" margin: 1px;">
                                                     <form action="home.php?id='.$posts['id'].'" method="post">
-                                                        <button name="likebtn">
-                                                            <i class="fa fa-heart" style="color: red;" ></i>
-                                                        </button>
+                                                        <div class="col" style="float: left;">
+                                                            <button name="likebtn" class="btn btn-link p-0 m-0">
+                                                                <i class="fa fa-heart" style="color: red;" ><p style="color: black; float: right; margin-left: 7px;">'.$posts['likes'].'</p></i>
+                                                            </button>
+                                                        </div>
                                                     </form>
                                                 </div>
-
                                             </div>
                                         ';
                                     }
@@ -71,7 +68,7 @@
                                         echo'
                                             <div class="row card shadow-sm p-3 mb-3" style="width:80%; border-radius: 20px;">
                                                 <div class="col">
-                                                    <a href="./editPost.php?id='.$posts['id'].'" >
+                                                    <a href="./editPost.php?id='.$posts['id'].'">
                                                         <i class="fa fa-edit" style="float: right;"></i>
                                                     </a>
                                                     
@@ -84,17 +81,15 @@
                                                 <br>
                                                 <hr>
                                                 <div class="col" style=" margin: 1px">
-                                                    <i class="fa fa-heart" style="color: red;"></i>
-                                                    '.$posts['likes'].'
-                                                    <a href="../controller/deletePostController.php?id='.$posts['id'].'">
-                                                        <i class="fa fa-trash" style="color: red; float: right;"></i>
-                                                    </a>
-                                                </div>
-                                                <div>
                                                     <form action="home.php?id='.$posts['id'].'" method="post">
-                                                        <button name="likebtn">
-                                                            <i class="fa fa-heart" style="color: red;" ></i>
-                                                        </button>
+                                                        <div class="col" style="float: left;">
+                                                            <button name="likebtn" class="btn btn-link p-0 m-0">
+                                                                <i class="fa fa-heart" style="color: red;"><p style="color: black; float: right; margin-left: 7px;">'.$posts['likes'].'</p></i>
+                                                            </button>
+                                                        </div>
+                                                        <a href="../controller/deletePostController.php?id='.$posts['id'].'">
+                                                            <i class="fa fa-trash" style="color: red; float: right; padding-top:5px"></i>
+                                                        </a>
                                                     </form>
                                                 </div>
                                             </div>
@@ -102,7 +97,7 @@
                                     }
                                 }
                             ?>
-                        </div>
+                        </div>  
                     </div>
                 </div>
                 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
