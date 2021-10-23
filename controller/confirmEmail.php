@@ -12,18 +12,18 @@
                 $query = mysqli_query($con,$sql);
                 // Semua echo sini nih akan di tampilkan di layar web pas pencet link verifikasi di email
                 if($query){
-                    echo '<script>alert("Account verified successfully")</script>';
+                    echo '<script>alert("Account verified successfully");window.location = "../view/profile.php"</script>';
                 }
                 else{
-                    echo '<script>alert("Fail verification (ERROR : '.$query.')")</script>';
+                    echo '<script>alert("Fail verification (ERROR : '.$query.')");window.location = "../view/profile.php"</script>';
                 }
             }else{
-                echo '<script>alert("This Account has Verified Before")</script>';
+                echo '<script>alert("This Account has Verified Before");window.location = "../view/profile.php"</script>';
             }
         }else{
-            echo '<script>alert("CODE Not Found or Not Valid")</script>';
+            echo '<script>alert("CODE Not Found or Not Valid");window.location = "../view/profile.php"</script>';
         }
     }else{
-        echo '<script>alert("code unavailable")</script>';
+        echo '<script>alert("code unavailable");window.location = "../view/profile.php"</script>';
     }
 ?>
