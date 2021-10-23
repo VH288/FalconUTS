@@ -49,7 +49,7 @@
                     <div class="dashboard sticky-top">
                         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(23, 17, 75);">
                             <div class="container-fluid ms-5 me-5">
-                                <a class="navbar-brand" href="/Falcon">
+                                <a class="navbar-brand" href="home.php">
                                     <img src="https://cdn.discordapp.com/attachments/841580989113434135/899247180978728990/unknown.png" alt="FALCON" width="140" height="30">
                                 </a>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

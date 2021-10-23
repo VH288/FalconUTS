@@ -82,10 +82,4 @@
             }
         }
     }
-    else if(isset($_POST['cancel'])){
-        echo
-                '<script>
-                    window.location = "../view/profile.php"
-                </script>';
-    }
 ?>

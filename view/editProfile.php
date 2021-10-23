@@ -109,7 +109,7 @@
             </div>
             <div class="col-lg-6 mt-4 mb-5 ms-auto me-auto d-grid gap-2 d-md-flex justify-content-md-end">
                 <a href="./profile.php">
-                    <button class="btn btn-danger" type="cancle" name="cancel" >Cancel Edit</button>
+                    <button class="btn btn-danger" type="button" name="cancel" >Cancel Edit</button>
                 </a>
                 <button class="btn btn-primary ms-2" type="submit" name="edit">Save Changes</button>
             </div>
